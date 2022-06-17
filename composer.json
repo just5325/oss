@@ -1,0 +1,24 @@
+{
+  "name": "hcg/oss",
+  "description": "OSS工具类",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "黄翠刚",
+      "email": "532508307@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.2",
+    "aliyuncs/oss-sdk-php": "~2.4"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Hcg\\Oss\\": "src/"
+    }
+  }
+}
