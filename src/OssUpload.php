@@ -57,4 +57,20 @@ class OssUpload
         return $this->upload_file_origin_content;
     }
 
+    /**
+     * 生成object
+     * @param string $object_prefix object前缀名
+     * @author hcg<532508307@qq.com>
+     */
+    public function generateObject(string $file_path, string $object_prefix = ''): string
+    {
+        $path_info = pathinfo($file_path);
+        $file_name = md5_file($file_path).'.'.$path_info['extension'];
+        $object = date('Ymd').'/'.$file_name;
+        if(!empty($object_prefix)){
+            $object =  $object_prefix.'/'.$object;
+        }
+        return $object;
+    }
+
 }
